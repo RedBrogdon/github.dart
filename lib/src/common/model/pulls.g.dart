@@ -44,11 +44,11 @@ PullRequest _$PullRequestFromJson(Map<String, dynamic> json) {
     mergedBy: json['merged_by'] == null
         ? null
         : User.fromJson(json['merged_by'] as Map<String, dynamic>),
-    commentsCount: json['comments_count'] as int,
-    commitsCount: json['commits_count'] as int,
-    additionsCount: json['additions_count'] as int,
-    deletionsCount: json['deletions_count'] as int,
-    changedFilesCount: json['changed_files_count'] as int,
+    comments: json['comments'] as int,
+    commits: json['commits'] as int,
+    additions: json['additions'] as int,
+    deletions: json['deletions'] as int,
+    changedFiles: json['changed_files'] as int,
     labels: (json['labels'] as List)
         ?.map((e) =>
             e == null ? null : IssueLabel.fromJson(e as Map<String, dynamic>))
@@ -78,11 +78,11 @@ Map<String, dynamic> _$PullRequestToJson(PullRequest instance) =>
       'merged': instance.merged,
       'mergeable': instance.mergeable,
       'merged_by': instance.mergedBy,
-      'comments_count': instance.commentsCount,
-      'commits_count': instance.commitsCount,
-      'additions_count': instance.additionsCount,
-      'deletions_count': instance.deletionsCount,
-      'changed_files_count': instance.changedFilesCount,
+      'comments': instance.comments,
+      'commits': instance.commits,
+      'additions': instance.additions,
+      'deletions': instance.deletions,
+      'changed_files': instance.changedFiles,
       'labels': instance.labels,
     };
 

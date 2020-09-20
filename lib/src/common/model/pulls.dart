@@ -29,11 +29,11 @@ class PullRequest {
     this.merged,
     this.mergeable,
     this.mergedBy,
-    this.commentsCount,
-    this.commitsCount,
-    this.additionsCount,
-    this.deletionsCount,
-    this.changedFilesCount,
+    this.comments,
+    this.commits,
+    this.additions,
+    this.deletions,
+    this.changedFiles,
     this.labels,
   });
 
@@ -96,19 +96,19 @@ class PullRequest {
   User mergedBy;
 
   /// Number of comments
-  int commentsCount;
+  int comments;
 
   /// Number of commits
-  int commitsCount;
+  int commits;
 
   /// Number of additions
-  int additionsCount;
+  int additions;
 
   /// Number of deletions
-  int deletionsCount;
+  int deletions;
 
   /// Number of changed files
-  int changedFilesCount;
+  int changedFiles;
 
   /// Pull Request Labels
   List<IssueLabel> labels;
